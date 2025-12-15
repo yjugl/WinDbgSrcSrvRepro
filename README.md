@@ -4,7 +4,7 @@ Reproducing the issue with the provided EXE/PDB files
 - Copy `WinDbgSrcSrvRepro.pdb` to your symbol cache, e.g. `C:\ProgramData\Dbg\sym\WinDbgSrcSrvRepro.pdb\EBA25382142C48B68B05BF320F6CEC501\WinDbgSrcSrvRepro.pdb`.
 - Uninstall the current version of WinDbg: `winget uninstall Microsoft.WinDbg`.
 - Install the WinDbg version to test, e.g. `winget install Microsoft.WinDbg --version 1.2402.24001.0`.
-- Run `WinDbgSrcSrvRepro.exe` under WinDbg with SRCSRV support enabled, e.g. `windbgx -c ".symfix; !sym noisy; .srcnoisy 3; g; k" WinDbgSrcSrvRepro.exe`.
+- Run `WinDbgSrcSrvRepro.exe` under WinDbg with SRCSRV support enabled, e.g. `windbgx -c ".srcfix; !sym noisy; .srcnoisy 3; g; k" WinDbgSrcSrvRepro.exe`.
 - On GOOD versions: when the breakpoint triggers, the source code is shown.
 - On BAD versions: when the breakpoint triggers, WinDbg shows an error page.
 
@@ -43,6 +43,6 @@ Now for each version of WinDbg you want to test:
 
 - Uninstall the current version of WinDbg: `winget uninstall Microsoft.WinDbg`.
 - Install the WinDbg version to test, e.g. `winget install Microsoft.WinDbg --version 1.2402.24001.0`.
-- Run `WinDbgSrcSrvRepro.exe` under WinDbg with SRCSRV support enabled, e.g. `windbgx -c ".symfix; !sym noisy; .srcnoisy 3; g; k" WinDbgSrcSrvRepro.exe`.
+- Run `WinDbgSrcSrvRepro.exe` under WinDbg with SRCSRV support enabled, e.g. `windbgx -c ".srcfix; !sym noisy; .srcnoisy 3; g; k" WinDbgSrcSrvRepro.exe`.
 - On GOOD versions: when the breakpoint triggers, the source code is shown.
 - On BAD versions: when the breakpoint triggers, WinDbg shows an error page.
