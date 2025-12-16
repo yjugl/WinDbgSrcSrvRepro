@@ -37,7 +37,7 @@ Steps to reproduce the issue with your crafted PDB file
 - Open `WinDbgSrcSrvRepro.exe` once under `WinDbg` so that the PDB file gets copied to the symbol cache.
 - Double-check that `lm` shows `private symbols` for that binary with a path to the symbol cache.
 - Close WinDbg.
-- Now rename the repository folder e.g. to `WinDbgSrcRepro_NOCHEATING`, so that the debugger won't find the files on disk and will have to look for them online!
+- Now rename the repository folder e.g. to `WinDbgSrcSrvRepro_NOCHEATING`, so that the debugger won't find the files on disk and will have to look for them online!
 
 Now for each version of WinDbg you want to test:
 
